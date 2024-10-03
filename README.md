@@ -1,0 +1,2 @@
+# gestorFuncionalidades
+Funcionalidades Fronted
