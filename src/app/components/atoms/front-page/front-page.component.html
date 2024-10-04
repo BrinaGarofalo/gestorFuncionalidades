@@ -1,0 +1,80 @@
+<section class="tablePage">
+  <div class="tablePage__searchPage">
+    <input
+      type="text"
+      name="search"
+      placeholder="Búsqueda"
+      [(ngModel)]="name"
+      (input)="searchProductName()"
+    />
+  </div>
+
+  <div class="tablePage__descriptions">
+    <div class="tablePage__tableScrooll">
+      <table class="tablePage__title">
+        <tr class="tablePage__columns">
+          <th class="tablePage__column">Logo</th>
+          <th class="tablePage__column">Nombre del Producto</th>
+          <th class="tablePage__column">
+            Descripción
+            <img
+              class="tablePage__icon"
+              src="/assets/exclamacion.svg"
+              alt="mensaje informativo"
+            />
+          </th>
+          <th class="tablePage__column">
+            Fecha de Liberación
+            <img
+              class="tablePage__icon"
+              src="/assets/exclamacion.svg"
+              alt="mensaje informativo"
+            />
+          </th>
+          <th class="tablePage__column">
+            Fecha de Reestructuración
+            <img
+              class="tablePage__icon"
+              src="/assets/exclamacion.svg"
+              alt="mensaje informativo"
+            />
+          </th>
+        </tr>
+
+        <tr class="tablePage_rows" *ngFor="let product of productsFilter">
+          <td class="tablePage_description">
+            <img
+              *ngIf="product.logo"
+              [src]="product.logo"
+              alt="Logo"
+              width="50"
+            />
+
+            <div *ngIf="!product.logo" class="tablePage__contend">
+              {{ product.name.charAt(0)
+              }}{{ product.name.split(" ")[1].charAt(0) }}
+            </div>
+          </td>
+
+          <td class="tablePage_information">{{ product.name | uppercase }}</td>
+          <td class="tablePage_information">{{ product.description }}</td>
+          <td class="tablePage_information">{{ product.date_release | date : "dd-MM-yyyy" }}</td>
+          <td class="tablePage_information">{{product.date_revision | date : "dd-MM-yyyy" }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="container__select">
+    <p class="container__results">
+      {{ productsFilter?.length }} Resultados
+    </p>
+  <select
+        class="container__quantity"
+        [(ngModel)]="cantdSelect"
+        (change)="searchProductName()"
+      >
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+      </select>
+      

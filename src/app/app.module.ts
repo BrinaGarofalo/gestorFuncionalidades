@@ -4,8 +4,10 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ImagePageComponent } from "./components/atoms/image-page/image-page.component";
+import { FrontPageComponent } from "./components/atoms/front-page/front-page.component";
 
-import { PichinchaDesignSystemModule } from '@pichincha/ds-angular';
+
 
 
 
@@ -15,6 +17,8 @@ import { PichinchaDesignSystemModule } from '@pichincha/ds-angular';
 @NgModule({
   declarations: [
     AppComponent,
+    ImagePageComponent,
+    FrontPageComponent
  
   ],
   imports: [
@@ -23,7 +27,7 @@ import { PichinchaDesignSystemModule } from '@pichincha/ds-angular';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    PichinchaDesignSystemModule 
+   
 
    
   ],

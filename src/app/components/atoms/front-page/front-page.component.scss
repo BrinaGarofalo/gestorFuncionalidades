@@ -1,0 +1,99 @@
+.tablePage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0c1f50;
+  background-color: #d7e0f2a6;
+  &__tableScrooll {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline-start: 20px;
+
+    &__tableScrooll > th,
+    td {
+      flex: 0 0 212px;
+      width: 212px;
+      align-items: center;
+      justify-content: center;
+      scroll-snap-align: start;
+    }
+  }
+  &__searchPage {
+    width: 100%;
+    margin-top: 64px;
+    margin-left: 44px;
+    height: 36px;
+  }
+
+  &__descriptions {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px 40px 40px 40px;
+  }
+
+  &__title {
+    width: 100%;
+  }
+  &__icon {
+    width: 12px;
+    margin: 8px;
+  }
+  &__column {
+    background-color: #f2f9f9;
+    margin: 8px;
+
+    &__information {
+      display: flex;
+      flex: 0 0 212px;
+      width: 212px;
+      align-items: center;
+      justify-content: center;
+      scroll-snap-align: start;
+      padding: 8px;
+      font-size: 12px;
+      border-bottom: 2px solid;
+    }
+    &__rows {
+      display: flex;
+      margin: 0px 20px 20px 20px;
+      height: 24px;
+    }
+
+    &__contend,
+    &__image {
+      width: 22px;
+      height: 28px;
+      border-radius: 100px;
+      border: 1px solid #9fa8be;
+      background-color: #9fa8be;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__columns--selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    columns: 2;
+    background-color: #f2f9f9;
+    width: 94%;
+  }&__select{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  columns: 2;}
+  &__quantity {
+    text-align: center;
+    width: 56px;
+    height: 24px;
+  }
+  }
+
