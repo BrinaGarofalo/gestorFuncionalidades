@@ -13,7 +13,7 @@ import { Product } from "src/app/interfaces/product.interface";
   styleUrls: ["./front-page.component.scss"],
 })
 export class FrontPageComponent implements OnInit, OnChanges {
-  @Input() productData?: Product[] = [];
+  @Input() productData: Product[] = [];
 
   name: string = "";
   optionNumbers: number[] = [ ];
@@ -43,28 +43,12 @@ export class FrontPageComponent implements OnInit, OnChanges {
 
   searchProductName() {
     if (!this. name) {
-      this.productsFilter = this.productData?.slice(0, this.cantdSelect);
+      this.productsFilter = this.productData.slice(0, this.cantdSelect);
+      console.log(this.productsFilter)
     } else {
-      this.productsFilter = this.productData?.filter((product) =>
+      this.productsFilter = this.productData.filter((product) =>
         product.name.toLowerCase().includes(this. name.toLowerCase())
       );
   }
-  }
-  calculateNumbers() {
-    if (this.productData) {
-      const dateLength = this.productData.length;
-      const optionMax = 20;
-      const optionDefault = Math.min(dateLength, optionMax);
-      this.optionNumbers = Array.from(
-        { length: optionDefault },
-        (_, index) => index + 1
-      );
-    }
-  }
-  
-
-  handleClickEvent(){
-    alert('Evento clickEvent')
-  }
- 
+}
 }

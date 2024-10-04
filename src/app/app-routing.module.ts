@@ -4,12 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 
 
 
-const routes: Routes = [
-  { path: "", redirectTo: "/home", pathMatch: "full" },
-  //{ path: "home", component: HomePageComponent },
-  //{ path: "forms", component: FormsComponent },
-
-]
+const routes: Routes = []
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

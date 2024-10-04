@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ImagePageComponent } from "./components/atoms/image-page/image-page.component";
 import { FrontPageComponent } from "./components/atoms/front-page/front-page.component";
+import { HomePageComponent } from "./components/pages/home-page/home-page.component";
 
 
 
@@ -18,7 +19,8 @@ import { FrontPageComponent } from "./components/atoms/front-page/front-page.com
   declarations: [
     AppComponent,
     ImagePageComponent,
-    FrontPageComponent
+    FrontPageComponent,
+    HomePageComponent
  
   ],
   imports: [

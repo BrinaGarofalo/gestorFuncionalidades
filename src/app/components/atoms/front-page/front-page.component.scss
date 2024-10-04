@@ -37,6 +37,7 @@
 
   &__title {
     width: 100%;
+    border-collapse: collapse;
   }
   &__icon {
     width: 12px;
@@ -45,6 +46,7 @@
   &__column {
     background-color: #f2f9f9;
     margin: 8px;
+    text-align: left;
 
     &__information {
       display: flex;
