@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ImagePageComponent } from './image-page.component';
+import { ImagePageComponent } from "./image-page.component";
 
-describe('ImagePageComponent', () => {
+describe("ImagePageComponent", () => {
   let component: ImagePageComponent;
   let fixture: ComponentFixture<ImagePageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ImagePageComponent ]
-    })
-    .compileComponents();
+      declarations: [ImagePageComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ImagePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

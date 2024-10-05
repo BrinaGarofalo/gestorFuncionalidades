@@ -8,15 +8,15 @@ import { ProductsService } from "src/app/services/products.service";
   styleUrls: ["./home-page.component.scss"],
 })
 export class HomePageComponent implements OnInit {
-  dataList: Product[]= [];
+  dataList: Product[] = [];
 
   constructor(private ProductService: ProductsService) {}
 
   ngOnInit(): void {
-    this.serviceProduct()
+    this.serviceProduct();
   }
-  serviceProduct(): void{
-    this.ProductService.getProducts().subscribe((result:Data) => {
+  serviceProduct(): void {
+    this.ProductService.getProducts().subscribe((result: Data) => {
       this.dataList = result.data;
       console.log(this.dataList);
     });

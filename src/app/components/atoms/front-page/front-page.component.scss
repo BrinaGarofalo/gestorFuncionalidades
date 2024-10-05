@@ -82,20 +82,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;
     columns: 2;
     background-color: #f2f9f9;
     width: 94%;
-  }&__select{
+  }
+}
+.container__select{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 20px;
-  columns: 2;}
-  &__quantity {
-    text-align: center;
-    width: 56px;
-    height: 24px;
-  }
-  }
+  columns: 2;
+
+}
+.container__quantity{
+  margin-left: 980px;
+  width: 50px;
+  height: 24px;
+  border-radius: 3px;
+}
 

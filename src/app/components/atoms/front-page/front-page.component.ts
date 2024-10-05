@@ -16,23 +16,22 @@ export class FrontPageComponent implements OnInit, OnChanges {
   @Input() productData: Product[] = [];
 
   name: string = "";
-  optionNumbers: number[] = [ ];
+  optionNumbers: number[] = [];
   dateCurrent: string[] = [];
   productsFilter?: Product[] = [];
   cantdSelect: number = 5;
-  
-  variant = "primary"
-  label = "Button Labe"
-  size = "xlarge"
-  loading = false
-  disabled = false
-  iconName = 'calendar_today'
-  dropdownIcon = true
-  
+
+  variant = "primary";
+  label = "Button Labe";
+  size = "xlarge";
+  loading = false;
+  disabled = false;
+  iconName = "calendar_today";
+  dropdownIcon = true;
+
   constructor() {}
 
   ngOnInit(): void {
-  
     this.searchProductName();
   }
   ngOnChanges(changes: SimpleChanges): void {
@@ -42,13 +41,13 @@ export class FrontPageComponent implements OnInit, OnChanges {
   }
 
   searchProductName() {
-    if (!this. name) {
+    if (!this.name) {
       this.productsFilter = this.productData.slice(0, this.cantdSelect);
-      console.log(this.productsFilter)
+      console.log(this.productsFilter);
     } else {
       this.productsFilter = this.productData.filter((product) =>
-        product.name.toLowerCase().includes(this. name.toLowerCase())
+        product.name.toLowerCase().includes(this.name.toLowerCase())
       );
+    }
   }
-}
 }

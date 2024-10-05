@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { FrontPageComponent } from './front-page.component';
+import { FrontPageComponent } from "./front-page.component";
 
-describe('FrontPageComponent', () => {
+describe("FrontPageComponent", () => {
   let component: FrontPageComponent;
   let fixture: ComponentFixture<FrontPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FrontPageComponent ]
-    })
-    .compileComponents();
+      declarations: [FrontPageComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(FrontPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

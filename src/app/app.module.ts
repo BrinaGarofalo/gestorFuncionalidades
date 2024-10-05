@@ -8,20 +8,12 @@ import { ImagePageComponent } from "./components/atoms/image-page/image-page.com
 import { FrontPageComponent } from "./components/atoms/front-page/front-page.component";
 import { HomePageComponent } from "./components/pages/home-page/home-page.component";
 
-
-
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
     ImagePageComponent,
     FrontPageComponent,
-    HomePageComponent
- 
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,9 +21,6 @@ import { HomePageComponent } from "./components/pages/home-page/home-page.compon
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-   
-
-   
   ],
   providers: [],
   bootstrap: [AppComponent],

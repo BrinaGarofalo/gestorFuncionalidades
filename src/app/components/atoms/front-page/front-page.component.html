@@ -58,23 +58,26 @@
 
           <td class="tablePage_information">{{ product.name | uppercase }}</td>
           <td class="tablePage_information">{{ product.description }}</td>
-          <td class="tablePage_information">{{ product.date_release | date : "dd-MM-yyyy" }}</td>
-          <td class="tablePage_information">{{product.date_revision | date : "dd-MM-yyyy" }}</td>
+          <td class="tablePage_information">
+            {{ product.date_release | date : "dd-MM-yyyy" }}
+          </td>
+          <td class="tablePage_information">
+            {{ product.date_revision | date : "dd-MM-yyyy" }}
+          </td>
         </tr>
       </table>
     </div>
   </div>
   <div class="container__select">
-    <p class="container__results">
-      {{ productsFilter?.length }} Resultados
-    </p>
-  <select
-        class="container__quantity"
-        [(ngModel)]="cantdSelect"
-        (change)="searchProductName()"
-      >
-        <option value="5">5</option>
-        <option value="10">10</option>
-        <option value="20">20</option>
-      </select>
-      
+    <p class="container__results">{{ productsFilter?.length }} Resultados</p>
+    <select
+      class="container__quantity"
+      [(ngModel)]="cantdSelect"
+      (change)="searchProductName()"
+    >
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="20">20</option>
+    </select>
+  </div>
+</section>
